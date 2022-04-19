@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <table>
+      <tr>
+        <th>Country Name</th>
+        <th>Area</th>
+        <th>Population</th>
+        <th>Density</th>
+      </tr>
+      {% for country in countries %}
+      <tr>
+        <td>{{ country['name'] }}</td>
+        <td>{{ country['population'] }}</td>
+        <td>{{ country['area'] }}</td>
+        <td>{{ country['density'] }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+{% endblock %}

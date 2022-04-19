@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask countries app</title>
+    <link rel="stylesheet" href='/static/main.css' />
+</head>
+<body>
+    <h2>{{ heading }}</h2>
+    <p>{{ description }}</p>
+
+    <div class="m-10">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="10">
+        {% for link in links %}
+            <a href="{{ link[0] }}" class="button">{{ link[1] }}</a>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>
+

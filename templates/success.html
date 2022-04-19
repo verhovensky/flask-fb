@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div>
+        <p>Country: {{ country['name'] }}</p>
+        <p>Population: {{ country['population']  }}</p>
+        <p>Area: {{ country['area']  }}</p>
+        <p>Density: {{ country['density']  }}</p>
+    </div>
+{% endblock %}

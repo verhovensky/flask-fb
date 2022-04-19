@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <form action='/add' method = "POST">
+      <label for="name">Country name:</label><br>
+      <input type = "text" minlength="5" size="25" name = "name" required/><br>
+      <label for="population">Population:</label><br>
+      <input type = "number" minlength="3" size="25" name = "population" required/><br>
+      <label for="area">Area</label><br>
+      <input type = "number" minlength="4" size="25" name = "area" required/><br>
+      <label for="density">Density</label><br>
+      <input type = "number" minlength="2" size="25" name = "density" required/></p>
+      <button class="button" type="submit">Create</button>
+    </form>
+{% endblock %}
