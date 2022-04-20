@@ -55,16 +55,15 @@ def list_all_countries():
     try:
         country_ref = db.collection(u'Countries')
         # Check if ID was passed to URL query
-        country_id = request.args.get('id')
-        if country_id:
-            todo = country_ref.document(country_id).get()
-            return jsonify(todo.to_dict()), 200
-        else:
-            countries = [doc.to_dict() for doc in country_ref.stream()]
-            return render_template('list.html', countries=countries,
-                                   heading='All countries',
-                                   description='Table displays all countries in a database',
-                                   links=links), 200
+        # country_id = request.args.get('id')
+        # if country_id:
+        #     c = country_ref.document(country_id).get()
+        #     return jsonify(c.to_dict()), 200
+        countries = [doc.to_dict() for doc in country_ref.stream()]
+        return render_template('list.html', countries=countries,
+                                heading='All countries',
+                                description='Table displays all countries in a database',
+                                   inks=links), 200
     except Exception as e:
         return f"An Error Occured: {e}"
 
